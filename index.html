@@ -37,7 +37,54 @@ function addTaskItem(taskText){
     li.appendChild(taskSpan);
 
     document.getElementById("taskList").appendChild(li)
+
+    //Call createDonebutton() function
+    const doneBtn = createDoneButton(li);
+    li.appendChild(doneBtn);
+
+    //Call createEditButton() function
+    const editBtn = createEditButton(li, taskSpan);
+    li.appendChild(editBtn);
 }
+
+function createDoneButton(li){
+    const doneBtn = document.createElement("button");
+    doneBtn.textContent = "Done";
+    
+    doneBtn.onclick = () => {
+        console.log(li);
+        li.classList.add("done");
+        const buttons = li.querySelectorAll("button");
+
+        buttons.forEach(Btn => {
+            Btn.disabled = true;
+        });
+   
+        console.log("Task completed", li.textContent,date.now());
+    }
+    return doneBtn;
+
+}
+function createEditButton(li, taskSpan){
+    const editBtn = document.createElement("button");
+    editBtn.textContent = "Edit";
+    editBtn.style.marginLeft = "8px";
+    editBtn.onclick = () => handleEditclickk(li)
+    return editBtn;
+}
+function handleEditclickk(li){
+    const currenttext = lii.firstChild.textContent.trim
+    const newText = prompt("Edit your task:", currenttext);
+
+    if (newText !== null && newText.trim() !== "") {
+        li.firstChild.textContent = newText.trim();
+        alert("Updated Task.");    
+     } else {
+            alert("No changes made.");
+        }
+        
+    }
+   
    </script>
 </body>
 </html>
