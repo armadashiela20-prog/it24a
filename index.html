@@ -38,14 +38,22 @@
     <script>
 
         function initMap(mapDataUrl) {
-
+           //render map
             const map = L.map('map').setView([8.360, 124.868], 17);
 
-            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+
+            const openstreetMap = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 19,
                 attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-            }).addTo(map);
+            });
 
+            //satellite Layer
+            const satelliteMap = L.tileLayer(
+            'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+            {attribution: 'Tiles (c) Esri -, Maxar, Earthstar Geographics, & GIS User Community'}
+            );
+               
+            satelliteMap.addTo(map);
 
             fetch('./campus-map.json')
                 .then(response => response.json())
@@ -74,6 +82,14 @@
                         `);
 
                     });
+
+                    //layer control
+                    const baseMaps = {
+                        "OpenStreetMap": openstreetMap,
+                        "Satellite": satelliteMap
+                    };
+
+                    L.control.layers(baseMaps).addTo(map);
 
                 });
         }
