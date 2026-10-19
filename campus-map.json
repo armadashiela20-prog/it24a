@@ -1,16 +1,16 @@
 [
     {
-        "name": "Student Welfare and Development Center",
-        "title": "SWDC",
-        "lat": 8.360176,
-        "lng": 124.867541,
-        "img": "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWtneXo5N2t4MXVraWhmdzVzcmh1dGx5bjl0cGFkMTBjcTBmOXB4OSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/HHzBaXsra2MHciRNQr/200.webp"
+        "name" : "Student Welfare and Development Center",
+        "title" : "SWDC",
+        "lat" :8.360176,
+        "lng" : 124.867541,
+         "image" : "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2hkZnNtYWFhZWF2Mnh5aGd4NWptajh2NXdwNWx3YzAwNnRzeGgwcSZlcD12MV9naWZzX3RyZW5kaW5nJmN0PWc/OuQmhmAAdJFLi/giphy.gif"
     },
     {
-        "name": "NBSC Covered Court",
-        "title": "NBSC CC",
-        "lat": 8.359992,
-        "lng": 124.86861,
-        "img": "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWtneXo5N2t4MXVraWhmdzVzcmh1dGx5bjl0cGFkMTBjcTBmOXB4OSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3ohs7O2afIz1a8bWPm/200.webp"
+        "name" : "NBSC Covered Court",
+        "title" : "NBSC CC",
+        "lat" :8.359992,
+        "lng" : 124.868861,
+        "image" : "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2hkZnNtYWFhZWF2Mnh5aGd4NWptajh2NXdwNWx3YzAwNnRzeGgwcSZlcD12MV9naWZzX3RyZW5kaW5nJmN0PWc/8QbwUh40Hl96yMgvOx/giphy.gif"
     }
 ]
